@@ -4,7 +4,10 @@ from sympy import *
 
 x = Symbol('x')
 
-formule = 'x^3 + 1.0'
+with open('model.dat','r') as f:
+    formule=f.readline()
+
+#formule = 'x^3 + 1.0'
 
 y = sympify(formule)
 velocity = y.diff(x)
@@ -21,7 +24,7 @@ x0=1.5
 
 y0=f(x0)
 y1=f1(x0)
-y2=f2(x0)
+y2=f1(x0)
 
 print(y0)
 print(y1)
